@@ -1,6 +1,6 @@
-let mahsulot = `Mahsulot turini kiriting (telefon, laptop, quloqchin)`
-let soni = `Mahsulot sonini kiriting`
-let chegirma_Kartasi = `Chegirma kartangiz bormi? (ha yoki yo'q)`
+let mahsulot = +prompt(`Mahsulot turini kiriting (telefon, laptop, quloqchin)`)
+let soni = +prompt(`Mahsulot sonini kiriting`)
+let chegirma_Kartasi = +prompt(`Chegirma kartangiz bormi? (ha yoki yo'q)`)
 
 let narx = 0;
 
@@ -26,8 +26,8 @@ console.log("Yakuniy to'lov summasi: $" + jami);
 
 // _________________________________________________
 
-let yosh = "Yoshingizni kiriting"
-let talaba = "Talabamisiz? (ha yoki yo'q)"
+let yosh = +prompt("Yoshingizni kiriting")
+let talaba = +prompt("Talabamisiz? (ha yoki yo'q)")
 
 let chiptaNarxi = 10000;
 
