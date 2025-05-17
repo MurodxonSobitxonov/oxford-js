@@ -51,8 +51,8 @@ for (let num = 2; num <= n; num++) {
     // 2 dan num-1 gacha bo'lgan barcha sonlarga bo'linishni tekshiramiz
     for (let i = 2; i < num; i++) {
         if (num % i === 0) {
-            tub = false; // bo'linadi, demak tub emas
-            break;       // ichki sikldan chiqamiz
+            tub = false; 
+            break;       
         }
     }
 
