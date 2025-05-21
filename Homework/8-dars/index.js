@@ -32,4 +32,3 @@ let massiv = [4, 7, 9];
 let natija = ortachaGeometrik(massiv);
 
 console.log("O'rtacha geometrik:", natija);
-  
