@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Geometrik o‘rtacha hisoblash</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        #natija {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Geometrik o‘rtacha hisoblagich</h2>
+
+    <p>Sonlarni vergul bilan kiriting (masalan: 2, 8, 4):</p>
+    <input type="text" id="sonlar" placeholder="Masalan: 2, 8, 4" size="40">
+    <br>
+    <button onclick="hisobla()">Hisobla</button>
+
+    <div id="natija"></div>
+
+    <script>
+        function hisobla() {
+            const kirish = document.getElementById("sonlar").value;
+            const sonlar = kirish.split(",").map(s => parseFloat(s.trim()));
+
+            if (sonlar.some(isNaN) || sonlar.length === 0) {
+                document.getElementById("natija").innerText = "❌ Noto‘g‘ri son kiritildi!";
+                return;
+            }
+
+            // 0 yoki manfiy sonlar geometrik o‘rtacha uchun yaroqsiz
+            if (sonlar.some(s => s <= 0)) {
+                document.getElementById("natija").innerText = "❌ Faqat musbat sonlar kerak!";
+                return;
+            }
+
+            const kopaytma = sonlar.reduce((a, b) => a * b, 1);
+            const ildizDaraja = 1 / sonlar.length;
+            const geometrikOrtacha = Math.pow(kopaytma, ildizDaraja);
+
+            document.getElementById("natija").innerText = `✅ Geometrik o‘rtacha: ${geometrikOrtacha.toFixed(4)}`;
+        }
+    </script>
+
+</body>
+
+</html>
