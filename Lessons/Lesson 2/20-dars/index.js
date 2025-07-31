@@ -25,7 +25,7 @@
 
 // creatElement - js da turib html element yaratish.
 
-//qppendChild - js dagi elementlarni html ga birlashtirish.
+//appendChild - js dagi elementlarni html ga birlashtirish.
 
 // Kod yozilish usuli
 
@@ -58,4 +58,4 @@ arr.forEach((item) => {
   p.textContent = item;
   item % 2 === 0 ? (p.style.color = 'red') : (p.style.color = 'blue');
     parent.appendChild(p);
-});
+}); 
