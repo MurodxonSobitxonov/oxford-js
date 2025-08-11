@@ -1,0 +1,72 @@
+// // 5. Chegirma hisoblash
+// function chegirmaHisoblash(summa) {
+//     if (summa > 100000) {
+//         console.log("10% chegirma: " + (summa - (summa * 0.10)) + " so'm");
+//     } else if (summa >= 50000 && summa <= 100000) {
+//         console.log("5% chegirma: " + (summa - (summa * 0.05)) + " so'm");
+//     } else {
+//         console.log("Chegirma yo'q: " + summa + " so'm");
+//     }
+// }
+
+function yoshAniqlash(tugilganYil) {
+    let hozirgiYil = new Date().getFullYear();
+    let yosh = hozirgiYil - tugilganYil;
+
+    if (yosh < 18) {
+        console.log("Yosh: " + yosh + " — Voyaga yetmagan");
+    } else {
+        console.log("Yosh: " + yosh);
+    }
+}
+// function loginCheck(login, parol) {
+//     if (login === "admin" && parol === "1234") {
+//         console.log("Hush kelibsiz!");
+//     } else {
+//         console.log("Login yoki parol noto‘g‘ri");
+//     }
+// }
+
+// function haroratCheck(harorat) {
+//     if (harorat < 0) {
+//         console.log("Muzlik");
+//     } else if (harorat > 0 && harorat <= 30) {
+//         console.log("Yoqimli harorat");
+//     } else {
+//         console.log("Juda issiq");
+//     }
+// }
+
+// function vaqtCheck(soat) {
+//     if (soat >= 6 && soat < 12) {
+//         console.log("Ertalab");
+//     } else if (soat >= 12 && soat < 18) {
+//         console.log("Kunduzi");
+//     } else if ((soat >= 18 && soat <= 23) || (soat >= 0 && soat < 6)) {
+//         console.log("Kechasi");
+//     } else {
+//         console.log("Noto‘g‘ri soat kiritildi");
+//     }
+// }
+
+
+// function oyMavsumi(oy) {
+//     if (oy === 12 || oy === 1 || oy === 2) {
+//         console.log("Qish");
+//     } else if (oy === 3 || oy === 4 || oy === 5) {
+//         console.log("Bahor");
+//     } else if (oy === 6 || oy === 7 || oy === 8) {
+//         console.log("Yoz");
+//     } else if (oy === 9 || oy === 10 || oy === 11) {
+//         console.log("Kuz");
+//     } else {
+//         console.log("Noto'g'ri oy raqami");
+//     }
+// }
+
+// chegirmaHisoblash(120000);  
+yoshAniqlash(2010);          
+// loginCheck("admin", "1234"); 
+// haroratCheck(25);           
+// vaqtCheck(21);
+// oyMavsumi(4);                
