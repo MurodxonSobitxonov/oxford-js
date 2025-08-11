@@ -21,7 +21,7 @@
 
 //innerHtml - elemt malumotni o'zgartirish yoki html element berish.
 
-// style - html elementmo style xossasi o'zgartirish.
+// style - html elementi style xossasi o'zgartirish.
 
 // creatElement - js da turib html element yaratish.
 

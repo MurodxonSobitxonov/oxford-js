@@ -1,54 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styl.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo ilovasi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <form class="form">
 
-    <h2>Todo App</h2>
-
-    <div class="form__create">
-      <input type="text" placeholder="Ismingizni Kiriting" class="myInput" required>
-
-      <button class="myBtn" type="submit">+</button>
+  <div class="container">
+    <h2>Todo ilovasi</h2>
+    <div class="input-group">
+      <input type="text" id="input" placeholder="Ismingizni kiriting">
+      <button id="addBtn">+</button>
     </div>
-    <div class="list"></div>
-    <div class="inputlar">
+    <ul id="taskList"></ul>
 
-      <div class="input1">
-        <input type="text" placeholder="buy a new gaming laptop" class="laptop">
-        <div><img src="./120l-240l-plastic-waste-bins30507721240.webp" alt=""></div>
-      </div>
+    <div class="footer">
+      <span id="count">Sizda 0 ta vazifa mavjud</span>
+      <button id="clear">Tozalash</button>
+    </div>
+  </div>
 
-      <div class="input2">
-        <input type="text" placeholder="Complete a previous task" class="Complate">
-
-        <div><img src="./wet-wheels-waste-rubbish-skip-dustbin59465780486.webp" alt="" class="delet"></div>
-      </div>
-
-      <div class="input3">
-        <input type="text" placeholder="Creat video fo Youtube" class="creat">
-        <div><img src="./120l-240l-plastic-waste-bins30507721240.webp" alt="" class="delet2"></div>
-      </div>
-
-      <div class="input4">
-        <input type="text" placeholder="Complete a previous task" class="Complate">
-
-        <div><img src="./wet-wheels-waste-rubbish-skip-dustbin59465780486.webp" alt="" class="delet3"></div>
-      </div>
-
-      <button class="server">Create All</button>
-
-      <h4>You have 4 pending tasck</h2>
-
-  </form>
-  <script src="./index.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
