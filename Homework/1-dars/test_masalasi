@@ -22,7 +22,7 @@ function login(login, parol) {
     if (login === "admin" && parol === "1234") {
         console.log("Hush kelibsiz!");
     } else {
-        console.log("Login yoki parol noto‘g‘ri");
+        console.log("Login yoki parol noto'g'ri");
     }
 }
 
