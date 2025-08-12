@@ -44,7 +44,7 @@ function vaqt(soat) {
     } else if ((soat >= 18 && soat <= 23) || (soat >= 0 && soat < 6)) {
         console.log("Kechasi");
     } else {
-        console.log("Noto‘g‘ri soat kiritildi");
+        console.log("Noto'g'ri soat kiritildi");
     }
 }
 
