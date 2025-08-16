@@ -63,7 +63,7 @@ function oy(oy) {
     }
 }
 
-chegirma(120000);  
+chegirma(1000);  
 yosh(2010);          
 login("admin", "1234"); 
 harorat(25);           
