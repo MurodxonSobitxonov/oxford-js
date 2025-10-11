@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rejalarim </title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <section class="card" aria-labelledby="title">
+    <div class="header">
+      <div class="logo">R</div>
+      <div>
+        <h1 id="title">Rejalarim</h1>
+        <p class="desc">Rejangizni yozining</p>
+      </div>
+    </div>
+
+    <form id="form" class="form" onsubmit="return false;">
+      <input id="inp" type="text" placeholder="Kiriting...">
+      <button id="addBtn" class="btn">Yaratish</button>
+    </form>
+
+    <div id="list" class="list" aria-live="polite">
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('form');
+    const inp = document.getElementById('inp');
+    const list = document.getElementById('list');
+
+    function createItem(text) {
+      const item = document.createElement('div');
+      item.className = 'item';
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+
+      const bullet = document.createElement('div');
+      bullet.className = 'bullet';
+      bullet.textContent = (list.children.length + 1);
+
+      const titleWrap = document.createElement('div');
+      const title = document.createElement('div');
+      title.className = 'title';
+      title.textContent = text;
+      const small = document.createElement('div');
+      small.className = 'small';
+      small.textContent = new Date().toLocaleString();
+
+      titleWrap.appendChild(title);
+      titleWrap.appendChild(small);
+
+      meta.appendChild(bullet);
+      meta.appendChild(titleWrap);
+
+      const actions = document.createElement('div');
+      actions.className = 'actions';
+
+      const del = document.createElement('button');
+      del.className = 'icon-btn delete';
+      del.innerHTML = "O'chirish";
+      del.onclick = () => {
+        item.remove();
+        updateIndices();
+      };
+
+      actions.appendChild(del);
+      item.appendChild(meta);
+      item.appendChild(actions);
+      return item;
+    }
+
+    function updateIndices() {
+      Array.from(list.children).forEach((it, i) => {
+        const b = it.querySelector('.bullet');
+        if (b) b.textContent = i + 1;
+      });
+    }
+
+    document.getElementById('addBtn').addEventListener('click', () => {
+      const v = inp.value.trim();
+      if (!v) {
+        inp.focus();
+        return;
+      }
+      const it = createItem(v);
+      list.prepend(it);
+      inp.value = '';
+      inp.focus();
+      updateIndices();
+    });
+
+    inp.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('addBtn').click();
+      }
+    });
+  </script>
+</body>
+
+</html>
