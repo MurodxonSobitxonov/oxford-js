@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>User Manager</h1>
+    <select id="themeSelect">
+      <option value="light">Light Mode</option>
+      <option value="dark">Dark Mode</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <input type="text" id="nameInput" placeholder="Ism kiriting..." />
+      <input type="number" id="ageInput" placeholder="Yosh kiriting..." />
+      <button id="addBtn">Qo'shish</button>
+    </section>
+
+    <section class="users-section">
+      <h2>Foydalanuvchilar</h2>
+      <ul id="userList"></ul>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
