@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: MonoLisa;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #242529;
+  color: cyan;
+  display: grid;
+  place-items: center;
+}
+
+button,
+input {
+  outline: none;
+}
+
+#form {
+  width: 520px;
+  height: 520px;
+  backdrop-filter: blur(5px);
+  background-color: #ffffff10;
+  border-radius: 10px;
+  /* background: ; */
+  text-align: center;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.form_create {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  display: flex;
+  gap: 5px;
+}
+
+.form_input {
+  border: 1px solid grey;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: .3s;
+}
+
+.form_input:focus {
+  border: 1px solid cyan;
+}
+
+#form_btn {
+  border: 1px solid cyan;
+  cursor: pointer;
+  background: transparent;
+  color: cyan;
+  height: 100%;
+  padding: 0 15px;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+#form_btn:hover {
+  background-color: cyan;
+  color: #242529;
+}
+
+#form_btn:active {
+  scale: 0.95;
+}
+
+
+.form_list {
+  list-style: none;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.form_item {
+  width: 100%;
+  height: 40px;
+  border: 1px solid cyan;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  animation: listAnimate 0.5s linear;
+}
+
+@keyframes listAnimate {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#form_item_delete_btn,
+#form_item_save_btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+
+#form_item_delete_btn {
+  background: red;
+}
+
+#form_item_save_btn {
+  background: green;
+}
