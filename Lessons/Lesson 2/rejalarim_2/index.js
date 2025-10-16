@@ -14,15 +14,13 @@ form.addEventListener("submit", (e) => {
     formItem.className = "form_item";
 
     formItem.innerHTML = `
-        ${formInput.value.trim().length > 25 
-            ? `${formInput.value.trim().slice(0, 25)}...` 
-            : formInput.value.trim()}
+        ${todo.title.length()> 25 
+            ? `${todo.title.slice(0, 25)}...` 
+            : todo.title()}
         <div class="form_list_control">
             <button id="form_item_delete_btn" type="button">O'chirish</button>
             <button id="form_item_save_btn" type="button">Bajarildik</button>
         </div>
     `;
 
-    formList.appendChild(formItem);
-    formInput.value = "";
 });

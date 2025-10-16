@@ -118,10 +118,72 @@ input {
   font-size: 12px;
 }
 
-#form_item_delete_btn {
+.form_item_delete_btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
   background: red;
 }
 
-#form_item_save_btn {
+.form_item_save_btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
   background: green;
+}
+
+.empty_item {
+  margin-top: 20px;
+}
+
+.form_list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 6px;
+  list-style: none;
+}
+
+.form_list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form_list::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 4px;
+}
+
+.form_item {
+  border: 1px solid cyan;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.form_item_delete_btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form_item_save_btn {
+  background: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.done {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: red;
 }

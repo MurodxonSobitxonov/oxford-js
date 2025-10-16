@@ -15,25 +15,27 @@
     <h2 class="form_title">Rejalarim</h2>
 
     <div class="form_create">
-      <input type="text" placeholder="Kiriting..." class="form_input">
+      <input type="text" autofocus required minlength="3" placeholder="Kiriting..." class="form_input">
 
       <button type="submit" id="form_btn">Yaratish</button>
     </div>
 
-    <ul class="form_list">
-      <li class="form_item">
-        Dars qilish
+    <div class="list_container">
+      <ul class="form_list">
+        <li class="empty_item">Ro'yxat mavjud emas</li>
+      </ul>
 
-        <div class="form_list_control">
-          <button id="form_item_delete_btn" type="button">O'chirish</button>
-          <button id="form_item_save_btn" type="button">Bajarildi</button>
-        </div>
-      </li>
-    </ul>
+      <div class="item">
+        <button class="done">Bajarildi</button>
+      </div>
+
+
+    </div>
   </form>
 
 
-  <script src="index.js"></script>
+  <script src="app.js"></script>
+  <!-- <script src="index.js"></script> -->
 </body>
 
 </html>
